@@ -1,0 +1,160 @@
+---
+title: "My Presentation Title"
+subtitle: "A template file for Quarto revealjs slides"
+author: "Author Name"
+format:
+  MACstyle-revealjs:
+    self-contained: true
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation.
+To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Logo
+
+If you'd like to change the logo in the bottom right corner, change the `logo: "mac-sees-logo.png"` in the `_extensions/.../MACstyle/_extension.yml` file.
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#| echo: true
+1 + 1
+```
+
+You can also add `text marked as code`! 
+
+# New topic! {background-color="#D9DBDB"}
+
+To make a slide like this, use:
+
+    # Section title {background-color="#D9DBDB"}
+    
+## Bullets
+
+::: {.theme-section}
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+:::
+
+
+## Executable Code, No Echo
+
+::: {.theme-section}
+
+A plot:
+
+```{r}
+#| echo: false
+#| fig-width: 20
+#| fig-height: 10
+plot(cars)
+```
+
+:::
+
+::: footer
+Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
+:::
+
+## LaTeX Equations
+
+::: {style="font-size: 80%;"}
+
+[MathJax](https://www.mathjax.org/) rendering of equations to HTML
+
+:::: columns
+::: {.column width="40%"}
+``` tex
+\begin{gather*} 
+S_i = \sum_j O_j f(c_{ij})\\
+V_{i} = \sum_j O_j \frac{F^p_{ij} \cdot F^c_{ij}}{\sum_{i} F^p_{ij} \cdot F^c_{ij}}
+\end{gather*}
+
+\begin{align}
+F^p_{ij} = \frac{P_{i}^\alpha}{\sum_{i} P_{i}^\alpha} &
+  F^c_{ij} = \frac{f(c_{ij})}{\sum_{i} f(c_{ij})}\\
+\end{align}
+
+\begin{equation}
+  f(c_{ij}) =
+    \begin{cases}
+      1 & \text{if $c_{ij} \geq 15$}\\
+      0 & \text{Otherwise}
+    \end{cases}       
+\end{equation}
+
+```
+:::
+
+::: {.column width="60%"}
+1 equation on each new line: 
+$$
+S_i = \sum_j O_j f(c_{ij})\\
+V_{i} = \sum_j O_j \frac{F^p_{ij} \cdot F^c_{ij}}{\sum_{i} F^p_{ij} \cdot F^c_{ij}}
+$$
+2 equations on the same line:
+$$
+\begin{align}
+F^p_{ij} = \frac{P_{i}^\alpha}{\sum_{i} P_{i}^\alpha} \text{ } &
+  F^c_{ij} = \frac{f(c_{ij})}{\sum_{i} f(c_{ij})}\\
+\end{align}
+$$
+Curly bracket multiple lines:
+$$
+f(c_{ij}) =
+  \begin{cases}
+  1 & c_{ij} \geq 15\\
+  0 & \text{Otherwise}
+  \end{cases}       
+$$
+:::
+::::
+:::
+
+::: footer
+Learn more: [LaTeX Equations](https://quarto.org/docs/authoring/markdown-basics.html#equations)
+:::
+
+## Column Layout {.smaller}
+
+::: {.theme-section}
+
+Arrange content into columns of varying widths:
+
+:::: columns
+::: {.column width="35%"}
+#### Motor Trend Car Road Tests
+
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="62%"}
+```{r}
+plot(cars)
+```
+:::
+::::
+::: 
+
+
+::: footer
+Learn more: [Multiple Columns](https://quarto.org/docs/presentations/revealjs/#multiple-columns)
+:::
+
+
+<!-- 
+LMSlogo.png  -> mac-sees-logo.png  
+
+removed: 
+CHICASlogo.png
+LUlogo.png
+-->

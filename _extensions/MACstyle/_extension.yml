@@ -1,0 +1,25 @@
+title: McMaster University University Quarto Template
+author: Anastasia Soukhov
+version: 0.0.1
+contributes:
+  formats:
+    revealjs:
+      logo: mac-sees-logo.png
+      theme: MACstyle.scss
+      height: 1200
+      width: 1600
+      auto-stretch: false
+      title-slide-attributes:
+        data-background-color: "#D9DBDB"
+    html:
+      theme: [default, MACstyle.scss]
+    pdf:
+      include-in-header:
+       - "MACpdf.tex"
+       - "columns.tex"
+      toc: true
+      toc-depth: 2
+      fontsize: 12pt
+      code-block-bg: MAClight
+      linkcolor: MACred
+      urlcolor: MACred
